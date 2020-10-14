@@ -40,3 +40,15 @@ html{
   background-size: cover;
   height: 50%;
 }
+
+.collapsible-header i{
+  font-size: 3em;
+}
+
+.collapsible{
+  border:none
+}
+
+.collapsible-header{
+  border-radius:10px;
+}
