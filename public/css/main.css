@@ -1,0 +1,42 @@
+html{
+  height: 100%;
+  box-sizing: border-box;
+  
+}
+
+
+.p-0{
+  padding: 0 !important;
+}
+
+.carousel{
+  height: 200px !important;
+}
+
+.m-0{
+  margin: 0PX;
+}
+
+.piePagina {
+  background-color: black;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  color: white;
+  
+}
+
+
+.collapsible-body{
+  padding: 0;
+}
+
+.collection .collection-item{
+  background-color: transparent;
+}
+
+.img-carricel{
+  background-size: cover;
+  height: 50%;
+}
