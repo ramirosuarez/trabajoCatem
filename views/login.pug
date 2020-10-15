@@ -1,18 +1,19 @@
 extends layout-login.pug
 block content
-
-  form.col.s12
-    .row
-      fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
-        legend Email Address
-        input.center(type='email' name='' placeholder='Correo electronico' style='border: none; margin: 0;' id='')
-      fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;')
-        legend password
-        input.center(type='password' name='' placeholder='Contraseña' style='border: none;margin: 0;' id='')
-    button.btn.col.s6.offset-s3(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
-      i.material-icons.left login
-      | Ingresar
-  a.btn.col.s6.offset-s3(style='border-radius: 10px; background-color: #dd1917;margin-bottom: 20px;\
-  margin-top: 20px;')
-    i.material-icons.left chevron_left
-    | Volver
+  .row
+    .col.s10.offset-s1
+      form.col.s12
+        .row
+          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+            legend Email Address
+            input.center(type='email' name='' placeholder='Correo electronico' style='border: none; margin: 0;' id='')
+          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;')
+            legend password
+            input.center(type='password' name='' placeholder='Contraseña' style='border: none;margin: 0;' id='')
+          button.btn.col.s6.offset-s3(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
+            i.material-icons.left login
+            | Ingresar
+      a.btn.col.s6.offset-s3(style='border-radius: 10px; background-color: #dd1917;margin-bottom: 20px;\
+      margin-top: 20px;')
+        i.material-icons.left chevron_left
+        | Volver
