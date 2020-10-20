@@ -1,9 +1,14 @@
 html{
-  height: 100%;
- 
-  
+  height: 100%;  
 }
 
+ ul.collection,
+ li.collection-item {
+  border: none !important;
+}
+.collection-item{
+  font-size: 18px !important;
+}
 
 .p-0{
   padding: 0 !important;
@@ -14,7 +19,7 @@ html{
 }
 
 .m-0{
-  margin: 0PX;
+  margin: 0px;
 }
 
 .piePagina {
@@ -28,12 +33,10 @@ html{
 }
 
 
-.collapsible-body{
-  padding: 0;
-}
-
 .collection .collection-item{
   background-color: transparent;
+  padding: 5px 20px;
+  border: none;
 }
 
 .img-carricel{
@@ -75,4 +78,48 @@ html{
 
 legend{
  font-size: 14px; 
+}
+
+a.collection-item{
+  text-transform: capitalize;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #000;
+}
+/* label underline focus color */
+.input-field.white input[type=text]:focus {
+  border-bottom: 1px solid #f44336;
+  box-shadow: 0 1px 0 0 #f44336;
+  
+}
+.input.white-text {
+  border-bottom: 1px solid #f44336;
+  box-shadow: 0 1px 0 0 #f44336;
+}
+
+button.btn.col.s6,.btn.col.s6{
+  width: 100%;
+}
+
+input.white-text{
+  border: none;margin-bottom: 20px;width: 90%;
+}
+
+.collection a.collection-item:not(.active):hover {
+  background-color: #f44336;
+}
+
+.collection a.collection-item {
+  color: #ffffff;
+}
+
+a.collection-item{
+  padding-top: 20px !important;
+  padding-bottom:10px !important ;
+}
+a.collection-item:last-of-type{
+  padding-top: 20px !important;
+  padding-bottom:20px !important ;
 }

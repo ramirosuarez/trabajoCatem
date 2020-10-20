@@ -7,14 +7,14 @@ block content
           .col.s10
             .col.s4
               a(href='/')
-                img(src='../static/img/logo.webp')
+                img(src='../static/img/logo.png' style='width: 100%;')
             .col.s8
-              h5.center.white-text CATEM MEXICO
+              h5.center.white-text CATEM TEHUANTEPEC
               p.center.white-text #fuerzacatem
           .collapsible-header.transparent.col.s2(style='margin-top:10px; border:none; ')
             a(href='#' style='border: none; ')
               i.center.material-icons.m-0.black-text(style='') menu
-          .col.s12.collapsible-body.transparent.p-0(style='border: 1px solid red;')
+          .col.s12.collapsible-body.transparent.p-0
             span
               .collection
                 a.white-text.collection-item(href='#!') NOSOTROS
@@ -22,6 +22,18 @@ block content
                 a.white-text.collection-item(href='#!') GALERIA
                 a.white-text.collection-item(href='#!') DIRECTORIO
                 a.white-text.collection-item(href='#!') CONTACTO
+                .card(style='background:#272727').white-text.p-0.m-0
+                  .card-content.center(style='padding: 24px 24px 0;')
+                    h6.m-0 Se parte del equipo CATEM TEHUANTEPEC 
+                    h6.m-0 Ingrese a su cuenta o registrese
+                  .card-action.center(style='border-top:none')
+                    a(href='/login' style='border-radius:10px').btn.red
+                      i.material-icons.left login
+                      | Ingresar
+                    a(href='/signup' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
+                      i.material-icons.left account_box
+                      | Crear cuenta
+
   .carousel.carousel-slider
     .carousel-item.imagen(href='#one!')
       img.img-carricel(src='../static/img/1.webp' )
@@ -33,47 +45,39 @@ block content
       img.img-carricel(src='../static/img/4.jpeg' )
   .row(style='margin-bottom: 0 !important;background:#222222;padding:0px 15px')
     .col.s12
-      p.center.white-text()  directorio de colaboradores
-      .col.s12(style='border-radius:10px; padding: 20px 10px; margin-bottom: 20px;background:#666666 !important;')
+      h4.center.white-text()  Directorio de Colaboradores
+      .col.s12(style='border-radius:10px; /*padding: 20px 10px*/; margin-bottom: 20px;/*background:#666666 !important;*/')
         form(action='')
-          .nav-wrapper.white(style='padding: 1px 0 !important; margin-bottom: 12px;border-radius:10px;')
-            .input-field
-              input#search(type='search' required='')
-              label.label-icon(for='search')
-                i.material-icons search
-          .white(style='border-radius:10px;')
-            select(style='border-radius:10px;')
-              option.center(value='' disabled='' selected='') Choose your option
-              option(value='1') Option 1
-              option(value='2') Option 2
-              option(value='3') Option 3
+          .input-field.white(style='border-radius:10px; padding: 8px 16px')
+            input#search(type='text' required='' placeholder='¿Que necesitas?' style='margin-bottom: 10px;width: 95%;padding-left: 12px;')
           .col.s6.offset-s3.center
-            button.btn.red.center(type='submit' name='action')
+            button.btn.red.center(type='submit' name='action' style='border-radius:10px; ' )
+              i.left.material-icons search
               | Buscar
   .row(style='background:#444444;margin-bottom: auto;')
-    h4.center.z-depth-0.m-0 Categorias
-      ul.collapsible(style='margin: 18px 18px;border:none')
-        li
-          .collapsible-header.z-depth-0.p-0(style='border-radius:10px;')
-            .col.s12
-              p.center.m-0 Desarrollo
-          .collapsible-body.z-depth-0.p-0
-            span
-              .collection
-                a.collection-item(href='#!') Lorem, ipsum dolor.
-                a.collection-item(href='#!') Lorem, ipsum dolor.
-                a.collection-item(href='#!') Lorem, ipsum dolor.
-                a.collection-item(href='#!') Lorem, ipsum dolor.
-      ul.collapsible(style='margin: 18px 18px;')
-        li
-          .collapsible-header.z-depth-0.p-0
-            .col.s12
-              p.center.m-0 Desarrollo
-          .collapsible-body.z-depth-0.p-0
-            span
-              .collection
-                a.collection-item(href='#!') Lorem, ipsum dolor.
-                a.collection-item(href='#!') Lorem, ipsum dolor.
-                a.collection-item(href='#!') Lorem, ipsum dolor.
-                a.collection-item(href='#!') Lorem, ipsum dolor.
+    h4.center.z-depth-0.m-0.white-text(style='text-transform: capitalize;padding-top:10px;') servicios 
+    ul.collapsible(style='margin: 18px 18px;border:none;')
+      li
+        .collapsible-header.z-depth-0.p-0(style='border-radius:10px;')
+          .col.s12(style='hegith:70px')
+            h5.center.m-0(style='padding:16px') Maquinaria y Equipo de construcción
+        .collapsible-body.z-depth-0.p-0
+          span
+            .collection
+              a.collection-item(href='#!') retroexcavadora
+              a.collection-item(href='#!') pavimentadora
+              a.collection-item(href='#!') tractores
+              a.collection-item(href='#!') motoniveladora
+    ul.collapsible(style='margin: 18px 18px;')
+      li
+        .collapsible-header.z-depth-0.p-0
+          .col.s12(style='hegith:70px')
+            h5.center.m-0(style='padding:16px') Mano de obra general
+        .collapsible-body.z-depth-0.p-0
+          span
+            .collection
+              a.collection-item(href='#!') carpintero.
+              a.collection-item(href='#!') albañil.
+              a.collection-item(href='#!') soldador.
+              a.collection-item(href='#!') Lorem, ipsum dolor.
 
