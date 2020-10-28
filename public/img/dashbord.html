@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5500/views/html/dashbord.html#! -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--Import Google Icon Font-->
+  <link href="./dashbord_files/icon" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="./dashbord_files/normalize.css">
+  <link type="text/css" rel="stylesheet" href="./dashbord_files/materialize.min.css" media="screen,projection">
+  <link rel="stylesheet" href="./dashbord_files/main.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body><body">
+  <div class="row" style=" display: flex;
+  align-items: center;">
+
+  <img src="./dashbord_files/logo.png" width="15%" alt="">
+    <div class="col s9">
+      
+
+      <ul id="slide-out" class="sidenav">
+        <li><a href="http://127.0.0.1:5500/views/html/dashbord.html#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="http://127.0.0.1:5500/views/html/dashbord.html#!">Second Link</a></li>
+        <li>
+          <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="http://127.0.0.1:5500/views/html/dashbord.html#!">Third Link With Waves</a></li>
+      </ul>
+      <a href="http://127.0.0.1:5500/views/html/dashbord.html#" data-target="slide-out" class="sidenav-trigger"><i style="font-size: 6vh;" class="material-icons">menu</i></a>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="./dashbord_files/materialize.min.js"></script>
+  <script src="./dashbord_files/app.js"></script>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body"><div class="sidenav-overlay"></div><div class="drag-target"></div></body></html>

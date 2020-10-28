@@ -17,12 +17,24 @@ router.get('/signup', function (req, res) {
   })
 })
 
-router.get('/home',function (req, res) {
-  res.render('home',{
+// router.get('/home',function (req, res) {
+//   res.render('home',{
     
-  })
+//   })
+// })
+
+router.get('/home',function (req, res) {
+  res.render('dash',{
+    
+  })  
 })
 
+
+router.get('/socio',function (req ,res) {
+ res.render('socio',{
+   
+ }) 
+})
 
 
 

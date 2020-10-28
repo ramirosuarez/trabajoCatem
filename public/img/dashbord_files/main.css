@@ -99,8 +99,8 @@ a.collection-item{
   box-shadow: 0 1px 0 0 #f44336;
 }
 
-.w-100{
-  width: 100% !important;
+button.btn.col.s6,.btn.col.s6{
+  width: 100%;
 }
 
 input.white-text{
@@ -122,12 +122,4 @@ a.collection-item{
 a.collection-item:last-of-type{
   padding-top: 20px !important;
   padding-bottom:20px !important ;
-}
-
-.collection .collection-item {
-  padding: 0;
-}
-
-a.collection-item{
-  padding-left: 20px !important;
 }
