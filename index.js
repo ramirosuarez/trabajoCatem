@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 var path = require('path')
 //Apunta a otro archivo que sirve como router principal
