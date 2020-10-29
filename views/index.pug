@@ -26,13 +26,14 @@ block content
                   .card-content.center(style='padding: 24px 24px 0;')
                     h6.m-0 Se parte del equipo CATEM TEHUANTEPEC 
                     h6.m-0 Ingrese a su cuenta o registrese
-                  .card-action.center(style='border-top:none')
-                    a(href='/login' style='border-radius:10px').btn.red
-                      i.material-icons.left login
-                      | Ingresar
-                    a(href='/signup' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
-                      i.material-icons.left account_box
-                      | Crear cuenta
+                  .card-action.center.col.s12(style='border-top:none') 
+                    .row
+                      a(href='/login' style='border-radius:10px').btn.red
+                        i.material-icons.left login
+                        | Ingresar
+                      a(href='/signup' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
+                        i.material-icons.left account_box
+                        | Crear cuenta
 
   .carousel.carousel-slider
     .carousel-item.imagen(href='#one!')

@@ -36,7 +36,10 @@ router.get('/socio',function (req ,res) {
  }) 
 })
 
-
+router.get('/update',function (req,res) {
+  res.render('form-uptate',{
+  })
+})
 
 
 

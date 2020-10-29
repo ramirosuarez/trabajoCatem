@@ -131,3 +131,15 @@ a.collection-item:last-of-type{
 a.collection-item{
   padding-left: 20px !important;
 }
+
+.dropdown-content{
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+  color:#ffffff ;
+}
+.select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup{
+  color:#ffffff ;
+}
