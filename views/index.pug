@@ -1,4 +1,4 @@
-extends layout.pug
+extends layouts/layout.pug
 block content
   .row.m-0(style='background: #ec3642;')
     .col.s12.p-0
@@ -9,7 +9,8 @@ block content
               a(href='/')
                 img(src='../static/img/logo.png' style='width: 100%;')
             .col.s8
-              h5.center.white-text CATEM TEHUANTEPEC
+              //- h5.center.white-text= datos[0].name
+              h5.center.white-text CATEM TEHUANTEPEC 
               p.center.white-text #fuerzacatem
           .collapsible-header.transparent.col.s2(style='margin-top:10px; border:none; ')
             a(href='#' style='border: none; ')
@@ -22,18 +23,31 @@ block content
                 a.white-text.collection-item(href='#!') GALERIA
                 a.white-text.collection-item(href='#!') DIRECTORIO
                 a.white-text.collection-item(href='#!') CONTACTO
-                .card(style='background:#272727').white-text.p-0.m-0
+                .card(style='background:#272727').white-text.p-0
                   .card-content.center(style='padding: 24px 24px 0;')
                     h6.m-0 Se parte del equipo CATEM TEHUANTEPEC 
                     h6.m-0 Ingrese a su cuenta o registrese
                   .card-action.center.col.s12(style='border-top:none') 
                     .row
+                    
                       a(href='/login' style='border-radius:10px').btn.red
                         i.material-icons.left login
                         | Ingresar
                       a(href='/signup' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
                         i.material-icons.left account_box
                         | Crear cuenta
+              .card(style='background:#272727').white-text.p-0.m-0
+                .card-content.center(style='padding: 24px 24px 0;')
+                  h6.m-0 Buscas un servicio o Quieres darte a conocer  
+                  
+                .card-action.center.col.s12(style='border-top:none') 
+                  .row
+                    a(href='/frm-cliente'   style='border-radius:10px').btn.red
+                      i.material-icons.left login
+                      | Solicita
+                    a(href='/frmPrestador' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
+                      i.material-icons.left account_box
+                      | Unete
 
   .carousel.carousel-slider
     .carousel-item.imagen(href='#one!')

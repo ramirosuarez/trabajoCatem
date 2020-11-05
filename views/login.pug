@@ -1,15 +1,15 @@
-extends layout-login.pug
+extends layouts/layout-login.pug
 block content
   .row
     .col.s10.offset-s1
-      form.col.s12
+      form.col.s12(method='GET' action='/')
         .row
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
-            legend Email Address
-            input.white-text(type='email' name='' placeholder='Correo electronico' style='border: none;margin-bottom: 20px;width: 90%;' id='')
+            legend Correo Electronico
+            input.white-text(type='email' name='' placeholder='Correo electronico' style='border: none;margin-bottom: 20px;width: 90%;' )
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;')
             legend password
-            input.white-text(type='password' name='' placeholder='Contraseña' style='border: none;margin-bottom: 20px;width: 90%;' id='')
+            input.white-text(type='password' name='' placeholder='Contraseña' style='border: none;margin-bottom: 20px;width: 90%;' )
           button.btn.col.s12(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
             i.material-icons.left login
             | Ingresar

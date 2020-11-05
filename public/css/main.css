@@ -143,3 +143,10 @@ a.collection-item{
 .select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup{
   color:#ffffff ;
 }
+
+
+
+
+li.collection-item span{
+  text-align: center;
+}
