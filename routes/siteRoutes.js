@@ -114,8 +114,14 @@ router.get('/login' ,(req, res) => {
   })
 })
 
-router.get('/homePrestador', (req,red ) => {
+router.get('/homePrestador', (req,res ) => {
   res.render('dashPrestador')
+})
+
+router.get('/homeCliente', (req,res)=>{
+  res.render('dashCliente',{
+    
+  })
 })
 //////////////////////////////////////////////77
 module.exports = router
