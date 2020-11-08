@@ -81,11 +81,17 @@ router.get('/socio',function (req ,res) {
  }) 
 })
 
-router.get('/update',function (req,res) {
-  res.render('form-uptate',{
+router.get('/updateCliente',function (req,res) {
+  res.render('formUptateCliente',{
+    name:"Actuliza ó Modifica tus datos"
   })
 })
 
+router.get('/updateServicio',function (req,res) {
+  res.render('formUptateServicio',{
+    name:"Actuliza ó Modifica tus datos"
+  })
+})
 
 router.get('/notificaciones',function (req,res){
   res.render('notificaciones',{
@@ -120,7 +126,7 @@ router.get('/homePrestador', (req,res ) => {
 
 router.get('/homeCliente', (req,res)=>{
   res.render('dashCliente',{
-    
+
   })
 })
 //////////////////////////////////////////////77
