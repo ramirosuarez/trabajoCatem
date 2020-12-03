@@ -83,13 +83,13 @@ router.get('/socio',function (req ,res) {
 
 router.get('/updateCliente',function (req,res) {
   res.render('formUptateCliente',{
-    name:"Actuliza ó Modifica tus datos"
+    name:"Actuliza tus datos"
   })
 })
 
 router.get('/updateServicio',function (req,res) {
   res.render('formUptateServicio',{
-    name:"Actuliza ó Modifica tus datos"
+    name:"Actualiza tus datos"
   })
 })
 

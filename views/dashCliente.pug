@@ -1,6 +1,5 @@
 extends layouts/layout-dashCliente.pug
 block content
-  h5.white-text.center.m-0 dash del cliente
   
   .col.s12
     .card(style='border-radius: 10px;background-color: #444444;')
@@ -12,53 +11,81 @@ block content
       .card-content.white-text(style='padding:1rem 2rem;')
         ul.collection.p-0.m-0
           li.collection-item
-            span.center Nombre:
-            p fulano perengano merengano
+            small
+             span.center Nombre:
+            p Juan Perez Prado
           hr
 
           li.collection-item
-            span Codigo Postal:
-            p 70610
-          hr
-          li.collection-item
-            span Estado:
-            p Oaxaca
+            small
+              span Email:
+            p standard@example.com
           hr
 
           li.collection-item
-            span Municipio:
-            p Salina cruz
-          hr
-          li.collection-item
-            span Ciudad:
-            p Salina cruz
-          hr
-          li.collection-item
-            span Colonia:
-            p Hugo mayoral
-          hr
-          li.collection-item
-            span Calle:
-            p And 16 de octubre
+            small
+              span Telefono:
+            p xxx-xxx-xxx
           hr
 
           li.collection-item
-            span Numero Exterior:
-            p n3
+            small
+              span Fecha de nacimiento:
+            p 25-Mayo-2000
           hr
 
           li.collection-item
-            span Fecha de nacimiento:
-            p 10-AGOSTO-1995
+            small
+              span Colonia:
+            p Fracc. Los Tamarindos
           hr
 
           li.collection-item
-            span Email:
-            p admin@algo.com
+            small
+              span Calle:
+            p Manzanares
           hr
+
           li.collection-item
-            span telefono:
-            p XXX XXX-XXXX
+            small
+              span Municipio:
+            p Salina Cruz
+          hr
+
+          li.collection-item
+            small
+              span Ciudad:
+            p Salina Cruz
+          hr
+            
+          
+          .col.s6(style='margin-left: -10px')
+            li.collection-item
+              small
+                span Num. Ex.:
+              p #3
+            hr
+            
+          .col.s6
+            li.collection-item
+              small
+                span Num. Ex.:
+              p #3
+            hr
+
+          .col.s6(style='margin-left: -10px')
+            li.collection-item
+              small
+                span Estado:
+              p Oaxaca
+            hr
+
+          .col.s6
+            li.collection-item
+              small
+                span C.P.:
+              p 70760
+            hr
 
     
     //- a.btn.col.s8.offset-s2(href='socio' style='border-radius: 10px; background-color: #dd1917; margin-bottom: 12px;')

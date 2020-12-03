@@ -4,7 +4,7 @@ block content
   .row
       .col.s10.offset-s1
         form.col.s12(method='GET' action='homePrestador')
-          h4 FORMULARIO DE REGITRO PARA PRESTADO DE SERVICIO
+          h4 FORMULARIO DE REGITRO PARA PRESTADOR DE SERVICIOS
           //- .row
           //-   .col.s12
           //-     .card(style='border-radius: 10px;background-color: #444444;')
@@ -18,19 +18,23 @@ block content
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
             legend Nombre completo
             input.white-text(type='text' name='nombre' id='nombre' placeholder='Nombre Completo' style='border: none;margin-bottom: 20px;width: 90%;')
-
+          
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
-            legend Apellido Paterno
-            input.white-text(type='text' name='' placeholder='Apellido paterno' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
-
+            legend Servicios
+            input.white-text(type='text' name='' placeholder='Servicios' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+          
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
-            legend Apellido Materno
-            input.white-text(type='text' name='' placeholder='Apellidos Materno' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+            legend Numero Telefonico
+            input.white-text(type='number' name='' placeholder='Numero Telefonico' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+          
+          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+            legend Fecha de nacimiento
+            input.white-text(type="date" name='' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
           
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
             legend Codigo postal
             input.white-text(type='text' name='' placeholder='Codigo postal' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
-
+          
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
             legend Estado
             input.white-text(type='text' name='' placeholder='Estado' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
@@ -53,34 +57,14 @@ block content
           
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
             legend Numero Exterior
-            input.white-text(type='text' name='' placeholder='numero Exterior' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+            input.white-text(type='text' name='' placeholder='Num. Ext.' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
 
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
             legend Numero Interior
-            input.white-text(type='text' name='' placeholder='numero Interior' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
-
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
-            legend Fecha de nacimiento
-            input.white-text(type="date" name='' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
-
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
-            legend Correo electronico
-            input.white-text(type='email' name='' placeholder='ejemplo@gmail.com' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
-
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
-            legend Contraseña
-            input.white-text(type='password' name='' placeholder='****************' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
-
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
-            legend Numero Telefonico
-            input.white-text(type='number' name='' placeholder='Numero Telefonico' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
-
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
-            legend Servicios
-            input.white-text(type='number' name='' placeholder='Servicios' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+            input.white-text(type='text' name='' placeholder='Num. Int.' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
 
           button.btn.col.s12(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
-            i.material-icons.left person
+            i.material-icons.right person
             |Registrarse
           a.btn.col.s12(href="/" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
             i.material-icons.left chevron_left
