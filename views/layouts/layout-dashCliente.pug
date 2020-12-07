@@ -22,23 +22,28 @@ html
                   .col.s7
                     h5.center CATEM TEHUANTEPEC
                 .collection(style="border:none")
-                  a.collection-item(href='homeCliente')
+                  a.collection-item(href='homeAgremiado')
                     i.material-icons.left home
                     | Home
-                
-                  a.collection-item(href='updateCliente') 
-                    i.material-icons.left build
-                    | Editar datos
-                
+                  li
+                    .divider(style='margin-left: 30px; margin-right: 50px')
+
                   a.collection-item(href='notificaciones')
                     i.material-icons.left drafts
                     | Bandeja
                   
-                  a.collection-item(href='')
+                  a.collection-item(href='dto')
                     i.material-icons.left business_center
-                    | Trabajos
+                    | Trabajadores
 
-                  a.collection-item(href='') 
+                  li
+                    .divider(style='margin-left: 30px; margin-right: 50px')
+                  
+                  a.collection-item(href='updateCliente') 
+                    i.material-icons.left build
+                    | Editar datos
+                  
+                  a.collection-item(href='/') 
                     i.material-icons.left logout
                     | Cerrar sesion
 

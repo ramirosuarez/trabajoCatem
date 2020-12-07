@@ -9,10 +9,10 @@ const db = admin.firestore()
 router.get('/', async function (req, res) {
 
   const data = []
-  const productosRef = await db.collection('Data').get()
+  const agremiadosRef = await db.collection('Agremiados').get()
 
-  for (const producto of productosRef.docs) {
-    data.push(producto.data())
+  for (const agremiado of agremiadosRef.docs) {
+    data.push(agremiado.data())
   }
 
   console.log(data)
@@ -22,6 +22,13 @@ router.get('/', async function (req, res) {
   })
 })
 
+router.post('/homePrestador', async function(req, res){
+  console.log(req.body)
+  await db.collection('Agremiados').add(req.body)
+  res.redirect('/homePrestador')
+})
+
+
 router.get('/login', function (req, res) {
   res.render('login', {
   })
@@ -29,6 +36,28 @@ router.get('/login', function (req, res) {
 
 router.get('/signup', function (req, res) {
   res.render('signup', {
+  })
+})
+
+router.get('/dto', function (req, res){
+  res.render('dto', {
+  })
+})
+
+router.get('/notify', function (req, res){
+  res.render('notify', {
+    
+  })
+})
+
+router.get('/dash',async function (req, res){
+  const data = []
+  const agremiadosRef = await db.collection('Agremiados').get()
+  for (const agremiado of agremiadosRef.docs) {
+    data.push(agremiado.data())
+  }
+  res.render('dash1', {
+    agremiados:data
   })
 })
 
@@ -99,7 +128,7 @@ router.get('/notificaciones',function (req,res){
   })
 })
 
-router.get('/frm-cliente', (req ,res) => {
+router.get('/frmAgremiado', (req ,res) => {
   // var name = req.param('name')
   // console.log(name)
   res.render('frm-cliente',{
@@ -124,7 +153,7 @@ router.get('/homePrestador', (req,res ) => {
   res.render('dashPrestador')
 })
 
-router.get('/homeCliente', (req,res)=>{
+router.get('/homeAgremiado', (req,res)=>{
   res.render('dashCliente',{
 
   })

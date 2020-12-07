@@ -3,7 +3,7 @@ block content
 
   .row
       .col.s10.offset-s1
-        form.col.s12(method='GET' action='homeCliente')
+        form.col.s12(method='GET' action='homeAgremiado')
           h4 FORMULARIO DE REGITRO PARA AGREMIADO
           //- .row
           //-   .col.s12
@@ -17,8 +17,28 @@ block content
           //- input(type="text" disable name='name' value="a" style="display:none;" )
 
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
-            legend Nombre Completo
-            input.white-text(type='text' name='' placeholder='Nombre Completo' style='border: none;margin-bottom: 20px;width: 90%;' )
+            legend Nombre
+            input.white-text(type='text' name='' placeholder='Nombre' style='border: none;margin-bottom: 20px;width: 90%;' )
+
+          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+            legend Apeliido Paterno
+            input.white-text(type='text' name='' placeholder='Apellido Paterno' style='border: none; margin-bottom: 20px; width: 90%;')
+          
+          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+            legend Apeliido Materno
+            input.white-text(type='text' name='' placeholder='Apellido Materno' style='border: none; margin-bottom: 20px; width: 90%;')
+
+          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+            legend CURP
+            input.white-text(type='text' name='' placeholder='Apellido Paterno' style='border: none; margin-bottom: 20px; width: 90%;')
+          
+          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+            legend RFC
+            input.white-text(type='text' name='' placeholder='Apellido Paterno' style='border: none; margin-bottom: 20px; width: 90%;')
+          
+          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+            legend Num. Seguro Social
+            input.white-text(type='text' name='' placeholder='Num. Seguro Social' style='border: none; margin-bottom: 20px; width: 90%;')
 
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
             legend Numero Telefonico
