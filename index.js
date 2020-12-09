@@ -3,14 +3,14 @@ const app = express()
 const port = process.env.PORT || 3000
 
 var bodyParser = require('body-parser')
- 
- 
 
-const { config } = require('./config')
+
+
+const { config } = require('./config/config')
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
- 
+
 // parse application/json
 app.use(bodyParser.json())
 
@@ -18,7 +18,7 @@ var path = require('path')
 
 //Apunta a otro archivo que sirve como router principal
 const siteRoute = require('./routes/siteRoutes')
-// Midewares
+    // Midewares
 app.use('/static', express.static(__dirname + '/public'))
 
 
@@ -32,5 +32,5 @@ app.set('views', path.join(__dirname + '/views'))
 app.use('/', siteRoute)
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`Example app listening at http://localhost:${port}`)
 })

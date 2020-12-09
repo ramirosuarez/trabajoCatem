@@ -30,24 +30,25 @@ block content
                   .card-action.center.col.s12(style='border-top:none') 
                     .row
                     
-                      a(href='/login' style='border-radius:10px').btn.red
+                      a(href='/sign-in' style='border-radius:10px').btn.red
                         i.material-icons.left login
                         | Ingresar
-                      a(href='/signup' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
+                      a(href='/sign-up' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
                         i.material-icons.left account_box
                         | Crear cuenta
-              .card(style='background:#272727').white-text.p-0.m-0
-                .card-content.center(style='padding: 24px 24px 0;')
-                  h6.m-0 Buscas un servicio o Quieres darte a conocer  
-                  
-                .card-action.center.col.s12(style='border-top:none') 
-                  .row
-                    a(href='/frmAgremiado'   style='border-radius:10px').btn.red
-                      i.material-icons.left login
-                      | Solicita
-                    a(href='/frmPrestador' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
-                      i.material-icons.left account_box
-                      | Unete
+              if isLogged
+                .card(style='background:#272727').white-text.p-0.m-0
+                  .card-content.center(style='padding: 24px 24px 0;')
+                    h6.m-0 Buscas un servicio o Quieres darte a conocer  
+                    
+                  .card-action.center.col.s12(style='border-top:none') 
+                    .row
+                      a(href='/frm-agr'   style='border-radius:10px').btn.red
+                        i.material-icons.left login
+                        | Solicita
+                      a(href='/frm-afi' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
+                        i.material-icons.left account_box
+                        | Unete
 
   .carousel.carousel-slider
     .carousel-item.imagen(href='#one!')

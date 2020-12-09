@@ -3,29 +3,15 @@ block content
 
   .row
       .col.s10.offset-s1
-        form.col.s12(method='GET' action='/')
-          //- .row
-          //-   .col.s12
-          //-     .card(style='border-radius: 10px;background-color: #444444;')
-          //-       .card-content
-          //-         img(src='static/img/add_picture.png', style='width:90%', id='pv_categoriaImg')
-          //-         span.btn.btn-file
-          //-           i.material-icons.left cloud_upload
-          //-           |Subir
-          //-           input(type='file', name='categoriaImg', id='categoriaImg')
-
-         
+        form.col.s12(method='POST' action='/sign-up')
+          
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
             legend Correo electronico
-            input.white-text(type='email' name='' placeholder='ejemplo@gmail.com' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+            input.white-text(type='email' name='email' placeholder='ejemplo@gmail.com' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
 
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
             legend Contraseña
-            input.white-text(type='password' name='' placeholder='********' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
-
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
-            legend Verifique su constraseña 
-            input.white-text(type='password'  name='' placeholder='********' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+            input.white-text(type='password' name='password' placeholder='********' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
 
           button.btn.col.s12(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
             i.material-icons.right person
@@ -33,28 +19,4 @@ block content
           a.btn.col.s12(href="/" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
             i.material-icons.left chevron_left
             | Volver
-
-
-
-
-
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  script. 
-    const categoriaImg = document.getElementById('categoriaImg')
-
-    categoriaImg.addEventListener('change', function (){
-      const file = this.files[0]
-      console.log(file)
-      if(file){
-        const reader = new FileReader();
-        reader.addEventListener('load', function(){
-          console.log(this)
-          pv_categoriaImg.setAttribute('src', this.result)
-        })
-        reader.readAsDataURL(file)
-      } else {
-        pv_categoriaImg.setAttribute('src', 'static/img/add_picture.png')
-      }
-    })
-
 
