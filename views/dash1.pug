@@ -1,21 +1,19 @@
-extends layouts/layout-login.pug
+extends layouts/layout-dash.pug
 block content 
-
-    .col.s12
-        table.white-text.striped
-            thead
-                tr
-                th Folio
-                th Nombre(s)
-                th Apellido P.
-                th Apellido M.
-                th Telefono
-                
-            tbody
-            each agremiado in agremiados
-                tr
-                td= agremiado.folio
-                td= agremiado.nombre
-                td= agremiado.apellido_p
-                td= agremiado.apellido_m
-                td= agremiado.telefono_1
+    .row
+        .col.m12.s12
+            h5.white-text.center Afiliados
+        .col.m8.offset-m2.center
+            table.white-text.striped
+                thead
+                    tr
+                    th Folio
+                    th.center Nombre(s)
+                    th Telefono
+                    
+                tbody
+                each agremiado in agremiados
+                    tr
+                    td= agremiado.folio
+                    td.center= agremiado.nombre + " " + agremiado.apellido_p + " " + agremiado.apellido_m
+                    td= agremiado.telefono_1

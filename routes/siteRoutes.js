@@ -39,11 +39,6 @@ router.post('/sign-in', function(req, res) {
         .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
-
-            document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.modal');
-                var instances = M.Modal.init(elems, options);
-            });
         });
 
 
@@ -119,7 +114,7 @@ router.get('/upd-agr', function(req, res) {
 
 router.get('/upd-afi', function(req, res) {
     res.render('formUptateServicio', {
-        name: "Actualiza tus datos"
+        // name: "Actualiza tus datos"
     })
 })
 
@@ -135,12 +130,21 @@ router.get('/frm-agr', (req, res) => {
     })
 })
 
-router.get('/frm-afi', (req, res) => {
+router.get('/add-afi', (req, res) => {
     res.render('frmPrestador', {
 
     })
 })
 
+router.get('/logout', function (req, res) {
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+      }).catch(function(error) {
+        // An error happened.
+      });
+
+    res.redirect('/')
+})
 
 router.get('/home-afi', (req, res) => {
     res.render('dashPrestador')

@@ -1,9 +1,9 @@
-extends layouts/layout-dashCliente.pug
+extends layouts/layout-upd-afi.pug
 block content 
   .row
       h5.white-text.center.m-0= name
       .col.s10.offset-s1
-        form.col.s12(style='margin-top: 20px;' method='GET' action='homePrestador')
+        form.col.s12(style='margin-top: 20px;' method='GET' action='home-afi')
           //- .row
           //-   .col.s12
           //-     .card(style='border-radius: 10px;background-color: #444444;')
@@ -13,7 +13,7 @@ block content
           //-           i.material-icons.left cloud_upload
           //-           |Subir
           //-           input(type='file', name='categoriaImg', id='categoriaImg')
-
+        h5.white-text.center Actualiza tus datos
           fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
             legend Nombre completo
             input.white-text(type='text' name='nombre' id='nombre' placeholder='Nombre Completo' style='border: none;margin-bottom: 20px;width: 90%;')
@@ -73,7 +73,7 @@ block content
           button.btn.col.s10.offset-s1(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
             i.material-icons.right save
             |guardar
-          a.btn.col.s10.offset-s1(href="homePrestador" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
+          a.btn.col.s10.offset-s1(href="home-afi" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
             i.material-icons.left.large cancel
             | Cancelar
 
