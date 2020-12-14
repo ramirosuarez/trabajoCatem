@@ -4,16 +4,16 @@ block content
         .col.m12.s12
             h5.white-text.center Afiliados
         .col.m8.offset-m2.center
-            table.white-text.striped
-                thead
+            table.striped
+                thead.white-text
                     tr
-                    th Folio
-                    th.center Nombre(s)
-                    th Telefono
+                    th.center.red.accent-4 Folio
+                    th.center.red.accent-4 Nombre(s)
+                    th.center.red.accent-4 Telefono
                     
                 tbody
                 each agremiado in agremiados
                     tr
-                    td= agremiado.folio
-                    td.center= agremiado.nombre + " " + agremiado.apellido_p + " " + agremiado.apellido_m
-                    td= agremiado.telefono_1
+                    td.yellow.lighten-4.center= agremiado.folio
+                    td.yellow.lighten-4.center= agremiado.nombre + " " + agremiado.apellido_p + " " + agremiado.apellido_m
+                    td.yellow.lighten-4.center= agremiado.telefono_1

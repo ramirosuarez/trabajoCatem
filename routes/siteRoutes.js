@@ -69,7 +69,6 @@ router.post('/sign-up', function(req, res) {
         });
 
     res.redirect('/')
-
 })
 
 router.get('/dto', function(req, res) {
@@ -138,6 +137,7 @@ router.get('/add-afi', (req, res) => {
 
 router.get('/logout', function (req, res) {
     firebase.auth().signOut().then(function() {
+        console.log('si cerro secion xd')
         // Sign-out successful.
       }).catch(function(error) {
         // An error happened.
