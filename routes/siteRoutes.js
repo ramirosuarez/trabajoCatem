@@ -9,7 +9,7 @@ const firebase = require('firebase')
 router.get('/', async function(req, res) {
 
     res.render('index', {
-        isLogged: false
+        isLogged: true
     })
 })
 
@@ -73,13 +73,19 @@ router.post('/sign-up', function(req, res) {
 
 router.get('/dash', async function(req, res) {
     const data = []
+    let isLogged = true;
     const agremiadosRef = await db.collection('Agremiados').get()
     for (const agremiado of agremiadosRef.docs) {
         data.push({id: agremiado.id, data: agremiado.data()})
     }
-    res.render('dash1', {
-        agremiados: data
-    })
+    if (isLogged) {
+        res.render('dash1', {
+            agremiados: data
+        })
+    }
+    else {
+        res.redirect('/')
+    }
 })
 
 router.get('/home-afi', function(req, res) {
@@ -173,7 +179,7 @@ router.get('/directorio', function(req, res){
 
 router.get('/contacto', function(req, res){
     res.render('contacto', {
-        
+
     })
 })
 //////////////////////////////////////////////77

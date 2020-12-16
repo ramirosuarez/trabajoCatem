@@ -3,18 +3,34 @@ block content
     .row
         .col.m12.s12
             h5.white-text.center Afiliados
-        .col.m8.offset-m2.center
+        .col.m8.offset-m2.center.s12
             table.striped
                 thead.white-text
                     tr
                     th.center.red.accent-4 Folio
                     th.center.red.accent-4 Nombre(s)
                     th.center.red.accent-4 Telefono
+                    th.center.red.accent-4 Opciones
                     
                 tbody
                 each agremiado in agremiados
                     tr
-                    td.yellow.lighten-4.center 
-                        a(href=`/home-afi?id=${agremiado.id}&nombre=${agremiado.data.nombre}&apellido_p=${agremiado.data.apellido_p}&apellido_m=${agremiado.data.apellido_m}&calle=${agremiado.data.calle}&colonia=${agremiado.data.colonia}&ciudad=${agremiado.data.ciudad}&cp=${agremiado.data.cp}&curp=${agremiado.data.curp}&especialidad=${agremiado.data.especialidad}&estado=${agremiado.data.estado}&fecha_nacimiento=${agremiado.data.fecha_nacimiento}&municipio=${agremiado.data.municipio}&num_ext=${agremiado.data.num_ext}&num_int=${agremiado.data.num_int}&rfc=${agremiado.data.rfc}&seguro_social=${agremiado.data.seguro_social}&telefono_1=${agremiado.data.telefono_1}&email=${agremiado.data.email}` )= agremiado.data.folio
+                    td.yellow.lighten-4.center= agremiado.data.folio
                     td.yellow.lighten-4.center= agremiado.data.nombre + " " + agremiado.data.apellido_p + " " + agremiado.data.apellido_m
                     td.yellow.lighten-4.center= agremiado.data.telefono_1
+                    td.yellow.lighten-4.center(style= 'width: 20%')
+                        .col.m4.s4
+                            a(href=`/home-afi?id=${agremiado.id}&nombre=${agremiado.data.nombre}&apellido_p=${agremiado.data.apellido_p}&apellido_m=${agremiado.data.apellido_m}&calle=${agremiado.data.calle}&colonia=${agremiado.data.colonia}&ciudad=${agremiado.data.ciudad}&cp=${agremiado.data.cp}&curp=${agremiado.data.curp}&especialidad=${agremiado.data.especialidad}&estado=${agremiado.data.estado}&fecha_nacimiento=${agremiado.data.fecha_nacimiento}&municipio=${agremiado.data.municipio}&num_ext=${agremiado.data.num_ext}&num_int=${agremiado.data.num_int}&rfc=${agremiado.data.rfc}&seguro_social=${agremiado.data.seguro_social}&telefono_1=${agremiado.data.telefono_1}&email=${agremiado.data.email}`)
+                                i.material-icons.small visibility
+                        .col.m4.s4
+                            a(href="#!!")
+                                i.material-icons.small edit
+                        .col.m4.s4
+                            a.modal-trigger(href="#modal1")
+                                i.material-icons.small delete
+                            #modal1.modal
+                                .modal-content
+                                    h4 Modal Header
+                                    p A bunch of text
+                                .modal-footer
+                                    a.modal-close.waves-effect.btn-flat(href='#!') Agree
