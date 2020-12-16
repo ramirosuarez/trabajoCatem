@@ -1,4 +1,4 @@
-extends layouts/layout-dashServicios.pug
+extends layouts/layout-dashAfi.pug
 block content
   
   .col.s12
@@ -13,83 +13,95 @@ block content
           li.collection-item
             small
              span.center Nombre:
-            p Juan Perez Prado
+            p= nombre + " " + apellido_p + " " + apellido_m
           hr
 
           li.collection-item
             span Servicios:
-            p Carpinteria, Electronica
+            p= especialidad
           hr
           
           li.collection-item
             small
-              span Email:
-            p standard@example.com
+              span CURP:
+            p= curp
+          hr
+
+          li.collection-item
+            small
+              span RFC:
+            p= rfc
+          hr
+
+          li.collection-item
+            small
+              span Seguro Social:
+            p= seguro_social
           hr
 
           li.collection-item
             small
               span Telefono:
-            p xxx-xxx-xxx
+            p= telefono_1
           hr
 
           li.collection-item
             small
               span Fecha de nacimiento:
-            p 25-Mayo-2000
+            p= fecha_nacimiento
           hr
 
           li.collection-item
             small
               span Colonia:
-            p Fracc. Los Tamarindos
+            p= colonia
           hr
 
           
           li.collection-item
             small
               span Calle:
-            p Manzanares
+            p= calle
           hr
 
           li.collection-item
             small
               span Municipio:
-            p Tehuantepec
+            p= municipio
           hr
 
           li.collection-item
             small
               span Ciudad:
-            p Tehuantepec
+            p= ciudad
           hr
 
           .col.s6(style='margin-left: -10px')
             li.collection-item
               small
                 span Num. Ex.:
-              p #3
+              p= num_ext
             hr
             
           .col.s6
             li.collection-item
               small
                 span Num. Int.:
-              p #3
+              p= num_int
             hr
           
           .col.s6(style='margin-left: -10px')
             li.collection-item
               small
                 span Estado:
-              p Oaxaca
+              p= estado
             hr
 
           .col.s6
             li.collection-item
               small
                 span C.P.:
-              p 70760
+              p= cp
             hr
           
 

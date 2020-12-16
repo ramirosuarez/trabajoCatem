@@ -18,11 +18,12 @@ block content
           .col.s12.collapsible-body.transparent.p-0
             span
               .collection
-                a.white-text.collection-item(href='#!') NOSOTROS
-                a.white-text.collection-item(href='#!') CONOCE TUS DERECHOS
-                a.white-text.collection-item(href='#!') GALERIA
-                a.white-text.collection-item(href='#!') DIRECTORIO
-                a.white-text.collection-item(href='#!') CONTACTO
+                a.white-text.collection-item(href='/nosotros') NOSOTROS
+                a.white-text.collection-item(href='/derechos') CONOCE TUS DERECHOS
+                a.white-text.collection-item(href='/galeria') GALERIA
+                a.white-text.collection-item(href='/directorio') DIRECTORIO
+                a.white-text.collection-item(href='/contacto') CONTACTO
+              if isLogged
                 .card(style='background:#272727').white-text.p-0
                   .card-content.center(style='padding: 24px 24px 0;')
                     h6.m-0 Se parte del equipo CATEM TEHUANTEPEC 
@@ -36,7 +37,7 @@ block content
                       a(href='/sign-up' style='margin-left: 10px; border-radius:10px').btn.amber.accent-4
                         i.material-icons.left account_box
                         | Crear cuenta
-              if isLogged
+              
                 .card(style='background:#272727').white-text.p-0.m-0
                   .card-content.center(style='padding: 24px 24px 0;')
                     h6.m-0 Buscas un servicio o Quieres darte a conocer  

@@ -14,6 +14,7 @@ block content
                 tbody
                 each agremiado in agremiados
                     tr
-                    td.yellow.lighten-4.center= agremiado.folio
-                    td.yellow.lighten-4.center= agremiado.nombre + " " + agremiado.apellido_p + " " + agremiado.apellido_m
-                    td.yellow.lighten-4.center= agremiado.telefono_1
+                    td.yellow.lighten-4.center 
+                        a(href=`/home-afi?id=${agremiado.id}&nombre=${agremiado.data.nombre}&apellido_p=${agremiado.data.apellido_p}&apellido_m=${agremiado.data.apellido_m}&calle=${agremiado.data.calle}&colonia=${agremiado.data.colonia}&ciudad=${agremiado.data.ciudad}&cp=${agremiado.data.cp}&curp=${agremiado.data.curp}&especialidad=${agremiado.data.especialidad}&estado=${agremiado.data.estado}&fecha_nacimiento=${agremiado.data.fecha_nacimiento}&municipio=${agremiado.data.municipio}&num_ext=${agremiado.data.num_ext}&num_int=${agremiado.data.num_int}&rfc=${agremiado.data.rfc}&seguro_social=${agremiado.data.seguro_social}&telefono_1=${agremiado.data.telefono_1}&email=${agremiado.data.email}` )= agremiado.data.folio
+                    td.yellow.lighten-4.center= agremiado.data.nombre + " " + agremiado.data.apellido_p + " " + agremiado.data.apellido_m
+                    td.yellow.lighten-4.center= agremiado.data.telefono_1

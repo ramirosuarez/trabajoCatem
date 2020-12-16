@@ -9,14 +9,14 @@ const firebase = require('firebase')
 router.get('/', async function(req, res) {
 
     res.render('index', {
-        isLogged: true
+        isLogged: false
     })
 })
 
 router.post('/home-afi', async function(req, res) {
     console.log(req.body)
     await db.collection('Agremiados').add(req.body)
-    res.redirect('/home-afi')
+    res.redirect('/dash')
 })
 
 
@@ -71,39 +71,28 @@ router.post('/sign-up', function(req, res) {
     res.redirect('/')
 })
 
-router.get('/dto', function(req, res) {
-    res.render('dto', {
-
-    })
-})
-
-router.get('/notify', function(req, res) {
-    res.render('notify', {
-
-    })
-})
-
 router.get('/dash', async function(req, res) {
     const data = []
     const agremiadosRef = await db.collection('Agremiados').get()
     for (const agremiado of agremiadosRef.docs) {
-        data.push(agremiado.data())
+        data.push({id: agremiado.id, data: agremiado.data()})
     }
     res.render('dash1', {
         agremiados: data
     })
 })
 
-router.get('/home-agr', function(req, res) {
-    res.render('dashCliente', {})
+router.get('/home-afi', function(req, res) {
+    console.log(req.query.data)
+    res.render('dashAfi', req.query)
 })
 
 
-router.get('/socio', function(req, res) {
-    res.render('socio', {
+// router.get('/socio', function(req, res) {
+//     res.render('socio', {
 
-    })
-})
+//     })
+// })
 
 router.get('/upd-agr', function(req, res) {
     res.render('formUptateCliente', {
@@ -112,8 +101,7 @@ router.get('/upd-agr', function(req, res) {
 })
 
 router.get('/upd-afi', function(req, res) {
-    res.render('formUptateServicio', {
-        // name: "Actualiza tus datos"
+    res.render('formUpdateAfi', {
     })
 })
 
@@ -130,7 +118,7 @@ router.get('/frm-agr', (req, res) => {
 })
 
 router.get('/add-afi', (req, res) => {
-    res.render('frmPrestador', {
+    res.render('frmAfi', {
 
     })
 })
@@ -146,9 +134,47 @@ router.get('/logout', function (req, res) {
     res.redirect('/')
 })
 
-router.get('/home-afi', (req, res) => {
-    res.render('dashPrestador')
+
+router.get('/notify', function(req, res) {
+    res.render('notify', {
+
+    })
 })
 
+// router.get('/home-agr', (req, res) => {
+//     res.render('dashPrestador')
+// })
+
+//Aqui van las rutas de informacion xd
+
+router.get('/nosotros', function(req, res) {
+    res.render('nosotros', {
+
+    })
+})
+
+router.get('/derechos', function(req, res) {
+    res.render('derechos', {
+
+    })
+})
+
+router.get('/galeria', function(req, res){
+    res.render('galeria', {
+
+    })
+})
+
+router.get('/directorio', function(req, res){
+    res.render('directorio', {
+
+    })
+})
+
+router.get('/contacto', function(req, res){
+    res.render('contacto', {
+        
+    })
+})
 //////////////////////////////////////////////77
 module.exports = router
