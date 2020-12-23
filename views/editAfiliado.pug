@@ -1,0 +1,128 @@
+extends layouts/layout-upd-afi.pug
+block content 
+  .row
+    .col.s10.offset-s1.m10.offset-m1
+      .row
+        .col.s12.m12.center
+          form(method='POST' action='editAfiliado')
+            h4.center.white-text ACTUALIZAR DATOS
+            //- .row
+            //-   .col.s12
+            //-     .card(style='border-radius: 10px;background-color: #444444;')
+            //-       .card-content
+            //-         img(src='static/img/add_picture.png', style='width:90%', id='pv_categoriaImg')
+            //-         span.btn.btn-file
+            //-           i.material-icons.left cloud_upload
+            //-           |Subir
+            //-           input(type='file', name='categoriaImg', id='categoriaImg')
+            .row
+              fieldset.col.s12.m2.offset-m9.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend Folio
+                input.white-text(type='number' name='folio' placeholder='Folio' style='border: none; margin-bottom: 20px; width: 90%;')
+
+              fieldset.col.s12.m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend Nombre
+                input.white-text(type='text' name='nombre' id='nombre' placeholder='Nombre Completo' style='border: none;margin-bottom: 20px;width: 85%;')
+              
+              fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend Apeliido Paterno
+                input.white-text(type='text' name='apellido_p' placeholder='Apellido Paterno' style='border: none; margin-bottom: 20px; width: 85%;')
+              
+              fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend Apeliido Materno
+                input.white-text(type='text' name='apellido_m' placeholder='Apellido Materno' style='border: none; margin-bottom: 20px; width: 85%;')
+              
+              fieldset.col.s12.m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Servicios
+                input.white-text(type='text' name='especialidad' placeholder='Servicios' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+              
+              fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend CURP
+                input.white-text(type='text' name='curp' placeholder='CURP' style='border: none; margin-bottom: 20px; width: 90%;')
+              
+              fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend RFC
+                input.white-text(type='text' name='rfc' placeholder='RFC' style='border: none; margin-bottom: 20px; width: 90%;')
+              
+              fieldset.col.s12.m2.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend Num. Seguro Social
+                input.white-text(type='number' name='seguro_social' placeholder='Num. Seguro Social' style='border: none; margin-bottom: 20px; width: 90%;')
+              
+              fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Numero Telefonico
+                input.white-text(type='number' name='telefono_1' placeholder='Numero Telefonico' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+              
+              fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Fecha de nacimiento
+                input.white-text(type="date" name='fecha_nacimiento' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+              
+              fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend Codigo postal
+                input.white-text(type='number' name='cp' placeholder='Codigo postal' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+              
+              fieldset.col.s12.m2.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Estado
+                input.white-text(type='text' name='estado' placeholder='Estado' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+
+              fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Municipio
+                input.white-text(type='text' name='municipio' placeholder='Municipio' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+
+              fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend Ciudad
+                input.white-text(type='text' name='ciudad' placeholder='Ciudad' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+
+              fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Colonia
+                input.white-text(type='text' name='colonia' placeholder='Colonia' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+
+              fieldset.col.s12.m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Calle
+                input.white-text(type='text' name='calle' placeholder='Calle' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+
+              fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Esquina
+                input.white-text(type='text' name='esquina' placeholder='Esquina' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+
+              fieldset.col.s12.m1.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+                legend Num. Ext.
+                input.white-text(type='text' name='num_ext' placeholder='Num. Ext.' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+
+              fieldset.col.s12.m1.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+                legend Num. Int.
+                input.white-text(type='text' name='num_int' placeholder='Num. Int.' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+
+              button.btn.col.s12.m6.offset-m3.center(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
+                i.material-icons.right person
+                |Actualizar
+              a.btn.col.s12.m6.offset-m3.center(href="/" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
+                i.material-icons.left chevron_left
+                | Volver
+
+
+
+
+
+
+
+
+
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  script. 
+    const categoriaImg = document.getElementById('categoriaImg')
+
+    categoriaImg.addEventListener('change', function (){
+      const file = this.files[0]
+      console.log(file)
+      if(file){
+        const reader = new FileReader();
+        reader.addEventListener('load', function(){
+          console.log(this)
+          pv_categoriaImg.setAttribute('src', this.result)
+        })
+        reader.readAsDataURL(file)
+      } else {
+        pv_categoriaImg.setAttribute('src', 'static/img/add_picture.png')
+      }
+    })

@@ -3,20 +3,16 @@ const router = express.Router()
 const admin = require('firebase-admin')
 const db = admin.firestore()
 const firebase = require('firebase')
+const afiliadoServices = require('../services/afiliadoServices')
 
-//Ruta index
+//Ruta inicio
 router.get('/', function (req, res) {
     res.render('index')
 })
 
 //Ruta añadir afiliado
 router.get('/addAfiliado', function (req, res) {
-    res.render('frmAfi')
-})
-
-router.get('/home-afi', function (req, res) {
-    console.log(req.query.data)
-    res.render('dashAfi', req.query)
+    res.render('addAfiliado')
 })
 
 router.post('/addAfiliado', async function (req, res) {
@@ -27,7 +23,17 @@ router.post('/addAfiliado', async function (req, res) {
 
 //Ruta editar afiliado
 router.get('/editAfiliado', function (req, res) {
-    res.render('formUpdateAfi')
+    res.render('editAfiliado')
+})
+
+router.post('/editAfiliado', function (req, res) {
+    res.redirect('/dash')
+})
+
+//Ruta dash Afiliado
+router.get('/home-afi', function (req, res) {
+    console.log(req.query.data)
+    res.render('dashAfi', req.query)
 })
 
 //Ruta dash tabla
@@ -55,22 +61,7 @@ router.get('/sign-up', function (req, res) {
     res.render('signup')
 })
 
-router.post('sign-up', function (req, res) {
-    console.log(req.body)
-    let email = req.body.email
-    let password = req.body.password
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((user) => {
-            res.redirect('/')
-            // Signed in
-            // ...
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ..
-        });
-})
+router.post('/sign-up', afiliadoServices.signup)
 
 //Ruta iniciar sesion
 router.get('/sign-in', function (req, res) {
@@ -92,17 +83,15 @@ router.post('/sign-in', function (req, res) {
 })
 
 //Ruta cerrar sesion
-router.get('/logout', function (req, res) {
-    firebase.auth().signOut()
-        .then(function () {
-            console.log('si cerro secion xd')
-            res.redirect('/')
-            // Sign-out successful.
-        })
-        .catch(function (error) {
-            console.log(error)
-            // An error happened.
-        });
+router.get('/logout', afiliadoServices.logout)
+
+//Ruta eliminar
+router.post('eliminar', function (req, res) {
+    db.collection("Agremiados").doc(id).delete().then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
 })
 
 /////////////////////////////////////////////////////////////////////////
