@@ -3,7 +3,8 @@ const router = express.Router()
 const admin = require('firebase-admin')
 const db = admin.firestore()
 const firebase = require('firebase')
-const afiliadoServices = require('../services/afiliadoServices')
+const userServices = require('../services/userServices')
+const afiliadosServices = require('../services/afiliadosServices')
 
 //Ruta inicio
 router.get('/', function (req, res) {
@@ -15,11 +16,7 @@ router.get('/addAfiliado', function (req, res) {
     res.render('addAfiliado')
 })
 
-router.post('/addAfiliado', async function (req, res) {
-    console.log(req.body)
-    await db.collection('Agremiados').add(req.body)
-    res.redirect('/dash')
-})
+router.post('/addAfiliado', afiliadosServices.add)
 
 //Ruta editar afiliado
 router.get('/editAfiliado', function (req, res) {
@@ -31,68 +28,32 @@ router.post('/editAfiliado', function (req, res) {
 })
 
 //Ruta dash Afiliado
-router.get('/home-afi', function (req, res) {
-    console.log(req.query.data)
-    res.render('dashAfi', req.query)
-})
+router.get('/home-afi', afiliadosServices.dash)
 
 //Ruta dash tabla
-router.get('/dash', async function (req, res) {
-    const data = []
-    let isLogged = true;
-    const agremiadosRef = await db.collection('Agremiados').get()
-    for (const agremiado of agremiadosRef.docs) {
-        data.push({
-            id: agremiado.id,
-            data: agremiado.data()
-        })
-    }
-    if (isLogged) {
-        res.render('dash1', {
-            agremiados: data
-        })
-    } else {
-        res.redirect('/')
-    }
-})
+router.get('/dash', afiliadosServices.tabla)
 
 //Ruta añadir correo
 router.get('/sign-up', function (req, res) {
     res.render('signup')
 })
 
-router.post('/sign-up', afiliadoServices.signup)
+router.post('/sign-up', userServices.signup)
 
 //Ruta iniciar sesion
-router.get('/sign-in', function (req, res) {
+router.get('/login', userServices.isAllReadyAuth, function (req, res) {
     res.render('login')
 })
 
-router.post('/sign-in', function (req, res) {
-    console.log(req.body)
-    let email = req.body.email
-    let password = req.body.password
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((user) => {
-            res.redirect('/')
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-        });
-})
+router.post('/login', userServices.login)
 
 //Ruta cerrar sesion
-router.get('/logout', afiliadoServices.logout)
+router.get('/logout', userServices.logout)
 
 //Ruta eliminar
-router.post('eliminar', function (req, res) {
-    db.collection("Agremiados").doc(id).delete().then(function() {
-        console.log("Document successfully deleted!");
-    }).catch(function(error) {
-        console.error("Error removing document: ", error);
-    });
-})
+router.post('eliminar', afiliadosServices.delete)
+
+router.get('/delet', afiliadosServices.delete)
 
 /////////////////////////////////////////////////////////////////////////
 //Rutas informacion catem

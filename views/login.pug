@@ -2,18 +2,19 @@ extends layouts/layout-login.pug
 block content
   .row
     .col.s10.offset-s1
-      form.col.s12(method='POST' action='/sign-in')
+      form.col.s12(method='POST' action='/login')
         .row
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px; required')
+          h5.center.white-text Iniciar sesion
+          fieldset.col.s12.m6.offset-m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px; required')
             legend Correo Electronico
             input.white-text(type='email' name='email' placeholder='Correo electronico' style='border: none;margin-bottom: 20px;width: 90%;' )
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;')
+          fieldset.col.s12.m6.offset-m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;')
             legend Password
             input.white-text(type='password' name='password' placeholder='Contraseña' style='border: none;margin-bottom: 20px;width: 90%;' )
-          button.btn.col.s12.prueba1(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;' onclick='background-color: green')
+          button.btn.col.s12.m4.offset-m4.center(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;' onclick='background-color: green')
             i.material-icons.right login
             | Ingresar
-      a.btn.col.s12(href='/' style='border-radius: 10px; background-color: #dd1917;')
+      a.btn.col.s12.m4.offset-m4.center(href='/' style='border-radius: 10px; background-color: #dd1917;')
         i.material-icons.left chevron_left
         | Volver
         

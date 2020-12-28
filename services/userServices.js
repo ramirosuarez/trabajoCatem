@@ -1,7 +1,11 @@
-const admin = require('firebase-admin')
-const db = admin.firestore()
-const firebase = require('firebase')
+// const admin = require('firebase-admin')
+// const db = admin.firestore()
+// const firebase = require('firebase')
 
+var firebase = require('firebase/app')
+require('firebase/auth')
+
+//Funcion agregar correo
 async function agregar (req, res) {
     console.log(req.body)
     let email = req.body.email
@@ -19,7 +23,9 @@ async function agregar (req, res) {
         })
 }
 
+//Funcion iniciar sesion
 async function iniciarSesion (req, res) {
+    console.log(req.body)
     let email = req.body.email
     let password = req.body.password
     firebase.auth().signInWithEmailAndPassword(email, password)
@@ -34,6 +40,17 @@ async function iniciarSesion (req, res) {
         })
 }
 
+async function isAllReadyAuth (req, res, next) {
+    const user = firebase.auth().currentUser
+    if (user != null) {
+      req.user = user
+      res.redirect('/dash')
+    } else {
+      next()
+    }
+}
+
+//Funcion cerra sesion
 async function cerrarSesion (req, res) {
     firebase.auth().signOut()
         .then(function () {
@@ -50,5 +67,6 @@ async function cerrarSesion (req, res) {
 module.exports = {
     signup: agregar,
     login: iniciarSesion,
+    isAllReadyAuth: isAllReadyAuth,
     logout: cerrarSesion
 }

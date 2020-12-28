@@ -4,6 +4,8 @@ block content
         .col.m12.s12
             h5.white-text.center Afiliados
         .col.m8.offset-m2.center.s12
+            a(href="/addAfiliado")
+                i.material-icons add
             table.striped
                 thead.white-text
                     tr
@@ -26,7 +28,7 @@ block content
                             a(href="/editAfiliado")
                                 i.material-icons.small edit
                         .col.m4.s4
-                            a(href='?' action='eliminar')
+                            a(href=`/delet?id=${agremiado.id}` action='eliminar')
                                 i.material-icons.small delete
                             //- #modal1.modal
                             //-     .modal-content

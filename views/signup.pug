@@ -4,19 +4,19 @@ block content
   .row
       .col.s10.offset-s1
         form.col.s12(method='POST' action='/sign-up')
-          
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+          h5.center.white-text Registrarse
+          fieldset.col.s12.m6.offset-m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
             legend Correo electronico
             input.white-text(type='email' name='email' placeholder='ejemplo@gmail.com' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
 
-          fieldset.col.s12.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
+          fieldset.col.s12.m6.offset-m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
             legend Contraseña
             input.white-text(type='password' name='password' placeholder='********' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
 
-          button.btn.col.s12(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
+          button.btn.col.s12.m4.offset-m4.center(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
             i.material-icons.right person
             |Registrarse
-          a.btn.col.s12(href="/" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
+          a.btn.col.s12.m4.offset-m4.center(href="/" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
             i.material-icons.left chevron_left
             | Volver
 
