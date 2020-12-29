@@ -20,14 +20,19 @@ router.post('/addAfiliado', afiliadosServices.add)
 
 //Ruta editar afiliado
 router.get('/editAfiliado', function (req, res) {
-    res.render('editAfiliado')
+    console.log(req.query)
+    res.render('editAfiliado', req.query)
+
 })
 
 router.post('/editAfiliado', function (req, res) {
     res.redirect('/dash')
 })
 
-//Ruta dash Afiliado
+// //Ruta dash Afiliado
+// router.get('/home-afi', afiliadosServices.getById)
+
+// Ruta dash Afiliado
 router.get('/home-afi', afiliadosServices.dash)
 
 //Ruta dash tabla
@@ -51,8 +56,6 @@ router.post('/login', userServices.login)
 router.get('/logout', userServices.logout)
 
 //Ruta eliminar
-router.post('eliminar', afiliadosServices.delete)
-
 router.get('/delet', afiliadosServices.delete)
 
 /////////////////////////////////////////////////////////////////////////

@@ -16,86 +16,87 @@ block content
             //-           |Subir
             //-           input(type='file', name='categoriaImg', id='categoriaImg')
             .row
-              fieldset.col.s12.m2.offset-m9.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
+              fieldset.col.s12.m2.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend Folio
-                input.white-text(type='number' name='folio' placeholder='Folio' style='border: none; margin-bottom: 20px; width: 90%;')
+                input.white-text(type='number' name='folio' placeholder='Folio' style='border: none; margin-bottom: 20px; width: 90%;' value=folio)
 
+            .row  
               fieldset.col.s12.m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend Nombre
-                input.white-text(type='text' name='nombre' id='nombre' placeholder='Nombre Completo' style='border: none;margin-bottom: 20px;width: 85%;')
+                input.white-text(type='text' name='nombre' id='nombre' placeholder='Nombre Completo' style='border: none;margin-bottom: 20px;width: 85%;' value=nombre)
               
               fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend Apeliido Paterno
-                input.white-text(type='text' name='apellido_p' placeholder='Apellido Paterno' style='border: none; margin-bottom: 20px; width: 85%;')
+                input.white-text(type='text' name='apellido_p' placeholder='Apellido Paterno' style='border: none; margin-bottom: 20px; width: 85%;' value=apellido_p)
               
               fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend Apeliido Materno
-                input.white-text(type='text' name='apellido_m' placeholder='Apellido Materno' style='border: none; margin-bottom: 20px; width: 85%;')
+                input.white-text(type='text' name='apellido_m' placeholder='Apellido Materno' style='border: none; margin-bottom: 20px; width: 85%;' value=apellido_m)
               
               fieldset.col.s12.m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Servicios
-                input.white-text(type='text' name='especialidad' placeholder='Servicios' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='especialidad' placeholder='Servicios' style='border: none;margin-bottom: 20px;width: 90%;' value=servicios)
               
               fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend CURP
-                input.white-text(type='text' name='curp' placeholder='CURP' style='border: none; margin-bottom: 20px; width: 90%;')
+                input.white-text(type='text' name='curp' placeholder='CURP' style='border: none; margin-bottom: 20px; width: 90%;' value=curp)
               
               fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend RFC
-                input.white-text(type='text' name='rfc' placeholder='RFC' style='border: none; margin-bottom: 20px; width: 90%;')
+                input.white-text(type='text' name='rfc' placeholder='RFC' style='border: none; margin-bottom: 20px; width: 90%;' value=rfc)
               
               fieldset.col.s12.m2.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend Num. Seguro Social
-                input.white-text(type='number' name='seguro_social' placeholder='Num. Seguro Social' style='border: none; margin-bottom: 20px; width: 90%;')
+                input.white-text(type='number' name='seguro_social' placeholder='Num. Seguro Social' style='border: none; margin-bottom: 20px; width: 90%;' value=seguro_social)
               
               fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Numero Telefonico
-                input.white-text(type='number' name='telefono_1' placeholder='Numero Telefonico' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='number' name='telefono_1' placeholder='Numero Telefonico' style='border: none;margin-bottom: 20px;width: 90%;' value=telefono_1)
               
               fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Fecha de nacimiento
-                input.white-text(type="date" name='fecha_nacimiento' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type="date" name='fecha_nacimiento' style='border: none;margin-bottom: 20px;width: 90%;' value=fecha_nacimiento)
               
               fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend Codigo postal
-                input.white-text(type='number' name='cp' placeholder='Codigo postal' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='number' name='cp' placeholder='Codigo postal' style='border: none;margin-bottom: 20px;width: 90%;' value=cp)
               
               fieldset.col.s12.m2.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Estado
-                input.white-text(type='text' name='estado' placeholder='Estado' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='estado' placeholder='Estado' style='border: none;margin-bottom: 20px;width: 90%;' value=estado)
 
               fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Municipio
-                input.white-text(type='text' name='municipio' placeholder='Municipio' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='municipio' placeholder='Municipio' style='border: none;margin-bottom: 20px;width: 90%;' value=municipio)
 
               fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend Ciudad
-                input.white-text(type='text' name='ciudad' placeholder='Ciudad' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='ciudad' placeholder='Ciudad' style='border: none;margin-bottom: 20px;width: 90%;' value=ciudad)
 
               fieldset.col.s12.m2.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Colonia
-                input.white-text(type='text' name='colonia' placeholder='Colonia' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='colonia' placeholder='Colonia' style='border: none;margin-bottom: 20px;width: 90%;' value=colonia)
 
               fieldset.col.s12.m3.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Calle
-                input.white-text(type='text' name='calle' placeholder='Calle' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='calle' placeholder='Calle' style='border: none;margin-bottom: 20px;width: 90%;' value=calle)
 
               fieldset.col.s12.m3.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Esquina
-                input.white-text(type='text' name='esquina' placeholder='Esquina' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='esquina' placeholder='Esquina' style='border: none;margin-bottom: 20px;width: 90%;' value=esquina)
 
               fieldset.col.s12.m1.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px; margin-bottom: 12px;')
                 legend Num. Ext.
-                input.white-text(type='text' name='num_ext' placeholder='Num. Ext.' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='num_ext' placeholder='Num. Ext.' style='border: none;margin-bottom: 20px;width: 90%;' value=num_ext)
 
               fieldset.col.s12.m1.offset-m1.center.white-text(style='border: 1px solid #bdbdbd; border-radius: 12px;margin-bottom: 12px;')
                 legend Num. Int.
-                input.white-text(type='text' name='num_int' placeholder='Num. Int.' style='border: none;margin-bottom: 20px;width: 90%;' id='' )
+                input.white-text(type='text' name='num_int' placeholder='Num. Int.' style='border: none;margin-bottom: 20px;width: 90%;' value=num_int)
 
               button.btn.col.s12.m6.offset-m3.center(value='Ingresar' type='submit' style='border-radius: 10px; margin-top: 20px;background-color: #dd1917;')
                 i.material-icons.right person
                 |Actualizar
-              a.btn.col.s12.m6.offset-m3.center(href="/" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
+              a.btn.col.s12.m6.offset-m3.center(href="/dash" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
                 i.material-icons.left chevron_left
                 | Volver
 

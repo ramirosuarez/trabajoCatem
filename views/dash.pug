@@ -15,7 +15,7 @@ block content
                     th.center.red.accent-4 Opciones
                     
                 tbody
-                each agremiado in agremiados
+                each agremiado, key in agremiados
                     tr
                     td.yellow.lighten-4.center= agremiado.data.folio
                     td.yellow.lighten-4.center= agremiado.data.nombre + " " + agremiado.data.apellido_p + " " + agremiado.data.apellido_m
@@ -25,16 +25,22 @@ block content
                             a(href=`/home-afi?id=${agremiado.id}&nombre=${agremiado.data.nombre}&apellido_p=${agremiado.data.apellido_p}&apellido_m=${agremiado.data.apellido_m}&calle=${agremiado.data.calle}&colonia=${agremiado.data.colonia}&ciudad=${agremiado.data.ciudad}&cp=${agremiado.data.cp}&curp=${agremiado.data.curp}&especialidad=${agremiado.data.especialidad}&estado=${agremiado.data.estado}&fecha_nacimiento=${agremiado.data.fecha_nacimiento}&municipio=${agremiado.data.municipio}&num_ext=${agremiado.data.num_ext}&num_int=${agremiado.data.num_int}&rfc=${agremiado.data.rfc}&seguro_social=${agremiado.data.seguro_social}&telefono_1=${agremiado.data.telefono_1}&email=${agremiado.data.email}`)
                                 i.material-icons.small visibility
                         .col.m4.s4
-                            a(href="/editAfiliado")
+                            a(href=`/editAfiliado?folio=${agremiado.data.folio}&nombre=${agremiado.data.nombre}&apellido_p=${agremiado.data.apellido_p}&apellido_m=${agremiado.data.apellido_m}&calle=${agremiado.data.calle}&colonia=${agremiado.data.colonia}&ciudad=${agremiado.data.ciudad}&cp=${agremiado.data.cp}&curp=${agremiado.data.curp}&especialidad=${agremiado.data.especialidad}&estado=${agremiado.data.estado}&fecha_nacimiento=${agremiado.data.fecha_nacimiento}&municipio=${agremiado.data.municipio}&num_ext=${agremiado.data.num_ext}&num_int=${agremiado.data.num_int}&rfc=${agremiado.data.rfc}&seguro_social=${agremiado.data.seguro_social}&telefono_1=${agremiado.data.telefono_1}`)
                                 i.material-icons.small edit
                         .col.m4.s4
-                            a(href=`/delet?id=${agremiado.id}` action='eliminar')
+                            a.modal-trigger(href=`#modal${key}`)
                                 i.material-icons.small delete
-                            //- #modal1.modal
-                            //-     .modal-content
-                            //-         h4 Eliminar Afiliado 
-                            //-         p ¿Esta seguro que desea eliminar este afiliado? Una vez hecho, no se puede corregir la acción.
-                            //-     .modal-footer
-                            //-         a.modal-close.waves-effect.btn-flat.red.white-text(href='#!') Cancelar
-                            //-         a.modal-close.waves-effect.btn-flat.green.white-text(href=`/dash?id=${agremiado.id}&nombre=${agremiado.data.nombre}&apellido_p=${agremiado.data.apellido_p}&apellido_m=${agremiado.data.apellido_m}&calle=${agremiado.data.calle}&colonia=${agremiado.data.colonia}&ciudad=${agremiado.data.ciudad}&cp=${agremiado.data.cp}&curp=${agremiado.data.curp}&especialidad=${agremiado.data.especialidad}&estado=${agremiado.data.estado}&fecha_nacimiento=${agremiado.data.fecha_nacimiento}&municipio=${agremiado.data.municipio}&num_ext=${agremiado.data.num_ext}&num_int=${agremiado.data.num_int}&rfc=${agremiado.data.rfc}&seguro_social=${agremiado.data.seguro_social}&telefono_1=${agremiado.data.telefono_1}&email=${agremiado.data.email}`) Eliminar
-//- onclick=`eliminar(${agremiado.id})`
+                    .modal(id=`modal${key}`)
+                        .modal-content
+                            h4 Eliminar Afiliado 
+                            p= `¿Esta seguro que desea eliminar a ${agremiado.data.nombre} con ID ${agremiado.id}`
+                        .modal-footer
+                            a.modal-close.waves-effect.btn-flat.red.white-text(href='#!') Cancelar
+                            a.waves-effect.btn-flat.green.white-text(href=`/delet?id=${agremiado.id}` data-target='reloj') Eliminar
+
+    #reloj.modal
+        .modal-content
+            h4 Borrando
+
+//- `/delet?id=${agremiado.id}` action='eliminar'  
+    a(href=`/home-afi?id=${agremiado.id}&nombre=${agremiado.data.nombre}&apellido_p=${agremiado.data.apellido_p}&apellido_m=${agremiado.data.apellido_m}&calle=${agremiado.data.calle}&colonia=${agremiado.data.colonia}&ciudad=${agremiado.data.ciudad}&cp=${agremiado.data.cp}&curp=${agremiado.data.curp}&especialidad=${agremiado.data.especialidad}&estado=${agremiado.data.estado}&fecha_nacimiento=${agremiado.data.fecha_nacimiento}&municipio=${agremiado.data.municipio}&num_ext=${agremiado.data.num_ext}&num_int=${agremiado.data.num_int}&rfc=${agremiado.data.rfc}&seguro_social=${agremiado.data.seguro_social}&telefono_1=${agremiado.data.telefono_1}&email=${agremiado.data.email}`)      
