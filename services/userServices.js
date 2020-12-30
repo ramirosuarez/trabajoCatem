@@ -40,6 +40,7 @@ async function iniciarSesion (req, res) {
         })
 }
 
+//Funcion para comprobar el incio de sesion
 async function isAllReadyAuth (req, res, next) {
     const user = firebase.auth().currentUser
     if (user != null) {
@@ -47,6 +48,17 @@ async function isAllReadyAuth (req, res, next) {
       res.redirect('/dash')
     } else {
       next()
+    }
+}
+
+//FUncion para mantener activa la sesion
+async function isAuth (req, res, next) {
+    const user = firebase.auth().currentUser
+    if (user != null) {
+        req.user = user
+        next()
+    } else {
+        res.redirect('/')
     }
 }
 
@@ -68,5 +80,6 @@ module.exports = {
     signup: agregar,
     login: iniciarSesion,
     isAllReadyAuth: isAllReadyAuth,
-    logout: cerrarSesion
+    isAuth: isAuth,
+    logout: cerrarSesion,
 }

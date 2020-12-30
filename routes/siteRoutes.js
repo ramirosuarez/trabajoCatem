@@ -12,14 +12,14 @@ router.get('/', function (req, res) {
 })
 
 //Ruta añadir afiliado
-router.get('/addAfiliado', function (req, res) {
+router.get('/addAfiliado', userServices.isAuth,function (req, res) {
     res.render('addAfiliado')
 })
 
 router.post('/addAfiliado', afiliadosServices.add)
 
 //Ruta editar afiliado
-router.get('/editAfiliado', function (req, res) {
+router.get('/editAfiliado', userServices.isAuth, function (req, res) {
     console.log(req.query)
     res.render('editAfiliado', req.query)
 
@@ -36,7 +36,7 @@ router.post('/editAfiliado', function (req, res) {
 router.get('/home-afi', afiliadosServices.dash)
 
 //Ruta dash tabla
-router.get('/dash', afiliadosServices.tabla)
+router.get('/dash', userServices.isAuth, afiliadosServices.tabla)
 
 //Ruta añadir correo
 router.get('/sign-up', function (req, res) {
@@ -56,7 +56,7 @@ router.post('/login', userServices.login)
 router.get('/logout', userServices.logout)
 
 //Ruta eliminar
-router.get('/delet', afiliadosServices.delete)
+router.get('/delet', userServices.isAuth, afiliadosServices.delete)
 
 /////////////////////////////////////////////////////////////////////////
 //Rutas informacion catem
