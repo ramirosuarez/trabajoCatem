@@ -6,15 +6,15 @@ var firebase = require('firebase/app')
 require('firebase/auth')
 
 //Funcion agregar correo
-async function agregar (req, res) {
+async function agregar(req, res) {
     console.log(req.body)
     let email = req.body.email
     let password = req.body.password
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((user) => {
             res.redirect('/')
-            // Signed in
-            // ...
+                // Signed in
+                // ...
         })
         .catch((error) => {
             var errorCode = error.code;
@@ -24,35 +24,34 @@ async function agregar (req, res) {
 }
 
 //Funcion iniciar sesion
-async function iniciarSesion (req, res) {
+async function iniciarSesion(req, res) {
     console.log(req.body)
     let email = req.body.email
     let password = req.body.password
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
-            res.redirect('/')
+            console.log("Inicio correcto brother")
+            res.redirect('/dash')
         })
         .catch((error) => {
             console.log(error.code)
-            console.log(error.message)
-            // var errorCode = error.code;
-            // var errorMessage = error.message;
+            console.log("Contraseña incorrecta o usuario no valido")
         })
 }
 
 //Funcion para comprobar el incio de sesion
-async function isAllReadyAuth (req, res, next) {
+async function isAllReadyAuth(req, res, next) {
     const user = firebase.auth().currentUser
     if (user != null) {
-      req.user = user
-      res.redirect('/dash')
+        req.user = user
+        res.redirect('/dash')
     } else {
-      next()
+        next()
     }
 }
 
 //FUncion para mantener activa la sesion
-async function isAuth (req, res, next) {
+async function isAuth(req, res, next) {
     const user = firebase.auth().currentUser
     if (user != null) {
         req.user = user
@@ -63,16 +62,16 @@ async function isAuth (req, res, next) {
 }
 
 //Funcion cerra sesion
-async function cerrarSesion (req, res) {
+async function cerrarSesion(req, res) {
     firebase.auth().signOut()
-        .then(function () {
+        .then(function() {
             console.log('si cerro secion xd')
             res.redirect('/')
-            // Sign-out successful.
+                // Sign-out successful.
         })
-        .catch(function (error) {
+        .catch(function(error) {
             console.log(error)
-            // An error happened.
+                // An error happened.
         })
 }
 

@@ -1,6 +1,8 @@
 doctype html
 html
   head
+    //Import fontAwesome 
+    script(src='https://kit.fontawesome.com/29d685da84.js' crossorigin='anonymous')
     // Import Google Icon Font
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
     // Import materialize.css
@@ -27,7 +29,8 @@ html
           a(href="" style='margin-right: 12px;')
            img(src="../static/img/you.webp", alt="youtube")
           a(href="/login" style='margin-right: 12px;')
-            img(src="../static/img/login.webp", alt="login")
+            i.fas.fa-sign-in-alt
+            //- img(src="../static/img/login.webp", alt="login")
       .col.s12.red
           p.center &copy; IDSO 2020
     // JavaScript at end of body for optimized loading
