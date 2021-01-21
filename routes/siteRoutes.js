@@ -25,12 +25,7 @@ router.get('/editAfiliado', userServices.isAuth, function(req, res) {
 
 })
 
-router.post('/editAfiliado', function(req, res) {
-    res.redirect('/dash')
-})
-
-// //Ruta dash Afiliado
-// router.get('/home-afi', afiliadosServices.getById)
+router.post('/editAfiliado', afiliadosServices.update)
 
 // Ruta dash Afiliado
 router.get('/home-afi', afiliadosServices.dash)

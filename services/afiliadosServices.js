@@ -46,12 +46,40 @@ async function eliminar(req, res) {
 
 }
 
-//Funcion actualizar datos
+//Funcion actualizar 2
+
 async function actualizar(req, res) {
-    const id = req.query.id
-    let AgremiadoRef = db.collection("Agremiados").doc(id)
-    AgremiadoRef.update(data)
+    console.log("envio de informacion")
+    console.log(req.body)
+    const agremiado = req.body
+    await db.collection('Agremiados').doc(agremiado.id).update({
+        nombre: agremiado.nombre,
+        apellido_p: agremiado.apellido_p,
+        apellido_m: agremiado.apellido_m,
+        especialidad: agremiado.especialidad,
+        curp: agremiado.curp,
+        rfc: agremiado.rfc,
+        seguro_social: agremiado.seguro_social,
+        telefono_1: agremiado.telefono_1,
+        fecha_nacimiento: agremiado.fecha_nacimiento,
+        cp: agremiado.cp,
+        estado: agremiado.estado,
+        municipio: agremiado.municipio,
+        ciudad: agremiado.ciudad,
+        colonia: agremiado.colonia,
+        calle: agremiado.calle,
+        num_ext: agremiado.num_ext,
+        num_int: agremiado.num_int,
+    })
+    res.redirect('/dash')
 }
+
+// //Funcion actualizar datos
+// async function actualizar(req, res) {
+//     const id = req.query.id
+//     let AgremiadoRef = db.collection("Agremiados").doc(id)
+//     AgremiadoRef.update(data)
+// }
 
 //Funcion para obtener elemento por Id
 async function getById(req, res) {
@@ -113,5 +141,5 @@ module.exports = {
     delete: eliminar,
     dash: dashAfi,
     getById: getById,
-    update: update,
+    update: actualizar,
 }

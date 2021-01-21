@@ -167,12 +167,6 @@ li.collection-item span {
 
 /* Media queries */
 
-@media (min-width: 992px) {
-    .logo {
-        width: 30% !important;
-    }
-}
-
 @media (max-width: 992px) {
     .logo2 {
         width: 200%;
@@ -182,26 +176,36 @@ li.collection-item span {
 }
 
 @media (min-width: 992px) {
+    .logo {
+        width: 30% !important;
+    }
     .titulo {
         margin-top: 8px;
     }
     .titulo1 {
         margin-top: 15px;
     }
-}
-
-@media (min-width: 992px) {
     .buscador {
         width: 80% !important;
         margin-left: 120px !important;
     }
-}
-
-@media (min-width: 992px) {
     .carousel {
         height: 500px !important;
     }
     .img-carricel {
         height: 100% !important;
+    }
+    .uno {
+        width: 200px !important;
+        margin-right: 50px !important;
+    }
+    .espacio {
+        margin-right: 10px !important;
+    }
+    .dos {
+        width: 240px !important;
+    }
+    .tres {
+        width: 200px !important;
     }
 }
