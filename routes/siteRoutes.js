@@ -19,7 +19,7 @@ router.get('/addAfiliado', userServices.isAuth, function(req, res) {
 router.post('/addAfiliado', afiliadosServices.add)
 
 //Ruta editar afiliado
-router.get('/editAfiliado', userServices.isAuth, function(req, res) {
+router.get('/editAfiliado', /*userServices.isAuth,*/ function(req, res) {
     console.log(req.query)
     res.render('editAfiliado', req.query)
 
@@ -31,7 +31,7 @@ router.post('/editAfiliado', afiliadosServices.update)
 router.get('/home-afi', afiliadosServices.dash)
 
 //Ruta dash tabla
-router.get('/dash', userServices.isAuth, afiliadosServices.tabla)
+router.get('/dash', /*userServices.isAuth,*/ afiliadosServices.tabla)
 
 //Ruta añadir correo
 router.get('/sign-up', function(req, res) {

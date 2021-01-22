@@ -36,6 +36,7 @@ async function iniciarSesion(req, res) {
         .catch((error) => {
             console.log(error.code)
             console.log("Contraseña incorrecta o usuario no valido")
+            res.redirect('/')
         })
 }
 

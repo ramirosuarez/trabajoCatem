@@ -74,13 +74,6 @@ async function actualizar(req, res) {
     res.redirect('/dash')
 }
 
-// //Funcion actualizar datos
-// async function actualizar(req, res) {
-//     const id = req.query.id
-//     let AgremiadoRef = db.collection("Agremiados").doc(id)
-//     AgremiadoRef.update(data)
-// }
-
 //Funcion para obtener elemento por Id
 async function getById(req, res) {
     console.log(req.query.id)

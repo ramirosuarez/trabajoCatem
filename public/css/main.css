@@ -195,17 +195,31 @@ li.collection-item span {
     .img-carricel {
         height: 100% !important;
     }
+    .apellido {
+        width: 350px !important;
+    }
     .uno {
-        width: 200px !important;
-        margin-right: 50px !important;
+        width: 260px !important;
     }
     .espacio {
-        margin-right: 10px !important;
+        margin-right: 30px !important;
     }
     .dos {
-        width: 240px !important;
+        width: 185px !important;
     }
     .tres {
-        width: 200px !important;
+        width: 160px !important;
+    }
+    .cuatro {
+        width: 130px !important;
+    }
+    .colonia {
+        width: 325px !important;
+    }
+    .cinco {
+        width: 125px !important;
+    }
+    .servicios {
+        width: 830px !important;
     }
 }
