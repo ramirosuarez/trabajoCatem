@@ -222,4 +222,12 @@ li.collection-item span {
     .servicios {
         width: 830px !important;
     }
+    .home {
+        margin-left: -300px !important;
+        width: 10% !important;
+    }
+    .tabla {
+        width: 80% !important;
+        margin-left: 130px !important;
+    }
 }

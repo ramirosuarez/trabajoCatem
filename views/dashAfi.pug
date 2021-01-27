@@ -7,7 +7,7 @@ block content
       img#pv_categoriaImg.img-carricel(src='../static/img/foto-sin-rostro-de-facebook.jpg' ,='' style='width:200px;height: 200px;border-radius:10px ')
   .col.s12(style='padding: 0 2rem 2rem;')
     h4.white-text.center Informacion Basica
-    .card(style='background-color: #666666;border-radius:10px')
+    .card.tabla(style='background-color: #666666;border-radius:10px')
       .card-content.white-text(style='padding:1rem 2rem;')
         ul.collection.p-0.m-0
           li.collection-item
@@ -103,7 +103,9 @@ block content
                 span C.P.:
               p= cp
             hr
-          
+    a.btn.col.s12.l6.offset-l3.center(href="/dash" style='border-radius: 10px; background-color: #dd1917;margin-top: 20px;')
+                i.material-icons.left chevron_left
+                | Volver      
 
     
     //- a.btn.col.s8.offset-s2(href='socio' style='border-radius: 10px; background-color: #dd1917; margin-bottom: 12px;')

@@ -6,6 +6,7 @@ const router = require('../routes/siteRoutes');
 
 //Funcion dash afiliados totales
 async function afiliados(req, res) {
+    console.log('Visualizando afiliados totales')
     const data = []
     let isLogged = true;
     const agremiadosRef = await db.collection('Agremiados').get()
@@ -29,6 +30,7 @@ async function afiliados(req, res) {
 async function agregar(req, res) {
     console.log(req.body)
     await db.collection('Agremiados').add(req.body)
+    console.log('Afiliado añadido correctamente')
     res.redirect('/dash')
 }
 
@@ -37,7 +39,7 @@ async function eliminar(req, res) {
     console.log(req.query.id)
     const id = req.query.id
     db.collection("Agremiados").doc(id).delete().then(function() {
-        console.log("Joder tio, se ha eliminado correctamente")
+        console.log("Afiliado eliminado correctamente")
         res.redirect('/dash')
     }).catch(function(error) {
         console.error("Error removing document: ", error)
@@ -49,7 +51,7 @@ async function eliminar(req, res) {
 //Funcion actualizar 2
 
 async function actualizar(req, res) {
-    console.log("envio de informacion")
+    console.log("Envio de informacion en curso")
     console.log(req.body)
     const agremiado = req.body
     await db.collection('Agremiados').doc(agremiado.id).update({
@@ -71,6 +73,7 @@ async function actualizar(req, res) {
         num_ext: agremiado.num_ext,
         num_int: agremiado.num_int,
     })
+    console.log('Informacion enviada')
     res.redirect('/dash')
 }
 
@@ -118,6 +121,7 @@ async function getById(req, res) {
 //Funcion dash afiliado individual
 function dashAfi(req, res) {
     console.log(req.query.data)
+    console.log('Visualizando informacion del afiliado especifico')
     res.render('dashAfi', req.query)
 }
 

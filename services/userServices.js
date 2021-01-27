@@ -30,7 +30,7 @@ async function iniciarSesion(req, res) {
     let password = req.body.password
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
-            console.log("Inicio correcto brother")
+            console.log("Inicio de sesion correcto")
             res.redirect('/dash')
         })
         .catch((error) => {
@@ -66,7 +66,7 @@ async function isAuth(req, res, next) {
 async function cerrarSesion(req, res) {
     firebase.auth().signOut()
         .then(function() {
-            console.log('si cerro secion xd')
+            console.log('Sesion cerrada correctamente')
             res.redirect('/')
                 // Sign-out successful.
         })

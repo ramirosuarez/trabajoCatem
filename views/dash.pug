@@ -37,7 +37,7 @@ block content
                     .modal(id=`modal${key}`)
                         .modal-content
                             h4 Eliminar Afiliado 
-                            p= `¿Esta seguro que desea eliminar a ${agremiado.data.nombre} con ID ${agremiado.id}?`
+                            p= `¿Esta seguro que desea eliminar a ${agremiado.data.nombre}?` /*con ID ${agremiado.id}?*/
                         .modal-footer
                             a.modal-close.waves-effect.btn-flat.red.white-text(href='#!') Cancelar
                             a.waves-effect.btn-flat.green.white-text(href=`/delet?id=${agremiado.id}` data-target='reloj') Eliminar

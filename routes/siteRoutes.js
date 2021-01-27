@@ -13,6 +13,7 @@ router.get('/', function(req, res) {
 
 //Ruta añadir afiliado
 router.get('/addAfiliado', userServices.isAuth, function(req, res) {
+    console.log('Adicion de afiliado en curso')
     res.render('addAfiliado')
 })
 
